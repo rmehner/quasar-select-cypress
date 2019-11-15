@@ -1,6 +1,6 @@
 # Quasar App (quasar-select)
 
-A Quasar Framework app
+See [https://github.com/quasarframework/quasar/issues/5600](https://github.com/quasarframework/quasar/issues/5600) for a detailled description.
 
 ## Install the dependencies
 ```bash
@@ -9,18 +9,24 @@ npm install
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
-quasar dev
+npm start
 ```
 
-### Lint the files
+### Reproduce the bug (?)
+
+In one terminal:
+
 ```bash
-npm run lint
+npm start
 ```
 
-### Build the app for production
+In another terminal:
+
 ```bash
-quasar build
+npm run test:e2e
 ```
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+### Relevant code:
+
+Page with select: [src/pages/Index.vue](src/pages/Index.vue)
+Test code: [test/cypress/plugins/index.js](test/cypress/plugins/index.js)
