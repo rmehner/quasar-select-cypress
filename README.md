@@ -29,4 +29,5 @@ npm run test:e2e
 ### Relevant code:
 
 Page with select: [src/pages/Index.vue](src/pages/Index.vue)
-Test code: [test/cypress/plugins/index.js](test/cypress/plugins/index.js)
+
+Test code: [test/cypress/integration/home/init.spec.js](test/cypress/integration/home/init.spec.js)
