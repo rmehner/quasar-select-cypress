@@ -1,20 +1,22 @@
-import * as ctx from  '../../../../quasar.conf.js'
+import * as ctx from "../../../../quasar.conf.js";
 
-describe('Landing', () => {
+describe("Landing", () => {
   beforeEach(() => {
-    cy.visit('/')
-  })
+    cy.visit("/");
+  });
 
-  it('.should() - select the number', () => {
-    cy.get('.q-page')
-      .contains('Number')
+  it(".should() - select the number", () => {
+    cy.get(".q-page")
+      .contains("Number")
       .within(() => {
-        cy.contains('arrow_drop_down').click()
-      })
+        cy.contains("arrow_drop_down").click();
+      });
 
-    cy.get('.q-menu')
-      .scrollTo('bottom')
-      .contains('4999')
-      .click()
-  })
-})
+    cy.get(".q-menu")
+      .scrollTo("bottom")
+      .wait(2000)
+      .scrollTo("bottom")
+      .contains("99")
+      .click();
+  });
+});
